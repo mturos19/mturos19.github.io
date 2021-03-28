@@ -6,5 +6,21 @@
     </head>
     <body>
         <h1>Absolutely David</h1>
+        <p>Unmute manually cuz Chrome is edgy</p>
+        <button onclick='toggleMute()'>Unmute</button>
+        <br><br>
+        <video width="800" height="400" loop autoplay muted  id="video">
+            <source src="absolutelydavid.mp4" type="video/mp4"
+        </video>
+        <script>
+            var video = document.getElementById('video');
+
+            function toggleMute(){
+                video.muted = !video.muted;
+            }
+        </script>
+        <p1></p1>
+        <br><br>
+        
     </body>
 </html>
