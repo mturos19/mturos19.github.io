@@ -1,0 +1,468 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>For Nastja 💜</title>
+    <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@400;700&family=Quicksand:wght@400;500;600&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --amethyst: #9b59b6;
+            --amethyst-light: #d4a5e8;
+            --rose: #e84a5f;
+            --rose-light: #ffb6c1;
+            --sunflower: #f4d03f;
+            --cream: #fef9f3;
+            --soft-pink: #fff0f5;
+        }
+
+        body {
+            font-family: 'Quicksand', sans-serif;
+            background: linear-gradient(135deg, var(--soft-pink) 0%, var(--cream) 50%, #fdf6e3 100%);
+            min-height: 100vh;
+            overflow-x: hidden;
+            position: relative;
+        }
+
+        /* Floating decorations */
+        .floating-elements {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            z-index: 0;
+            overflow: hidden;
+        }
+
+        .float {
+            position: absolute;
+            font-size: 2rem;
+            animation: float 15s infinite ease-in-out;
+            opacity: 0.7;
+        }
+
+        @keyframes float {
+            0%, 100% { transform: translateY(100vh) rotate(0deg); opacity: 0; }
+            10% { opacity: 0.7; }
+            90% { opacity: 0.7; }
+            100% { transform: translateY(-20vh) rotate(360deg); opacity: 0; }
+        }
+
+        /* Page container */
+        .page {
+            display: none;
+            min-height: 100vh;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            padding: 2rem;
+            position: relative;
+            z-index: 1;
+            animation: fadeIn 0.6s ease-out;
+        }
+
+        .page.active {
+            display: flex;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        /* Card styling */
+        .card {
+            background: rgba(255, 255, 255, 0.95);
+            border-radius: 30px;
+            padding: 3rem 4rem;
+            text-align: center;
+            box-shadow: 0 20px 60px rgba(155, 89, 182, 0.15);
+            max-width: 500px;
+            position: relative;
+            border: 3px solid var(--amethyst-light);
+        }
+
+        .card::before {
+            content: '🌻';
+            position: absolute;
+            top: -20px;
+            left: -20px;
+            font-size: 2.5rem;
+        }
+
+        .card::after {
+            content: '🌹';
+            position: absolute;
+            bottom: -20px;
+            right: -20px;
+            font-size: 2.5rem;
+        }
+
+        h1 {
+            font-family: 'Caveat', cursive;
+            font-size: 3rem;
+            color: var(--amethyst);
+            margin-bottom: 1.5rem;
+            text-shadow: 2px 2px 4px rgba(155, 89, 182, 0.2);
+        }
+
+        .question {
+            font-family: 'Caveat', cursive;
+            font-size: 2.5rem;
+            color: var(--rose);
+            margin-bottom: 2rem;
+            line-height: 1.3;
+        }
+
+        .subtitle {
+            font-size: 1.2rem;
+            color: #666;
+            margin-bottom: 2rem;
+        }
+
+        /* Buttons */
+        .btn-container {
+            display: flex;
+            gap: 1rem;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        .btn {
+            padding: 1rem 2rem;
+            font-family: 'Quicksand', sans-serif;
+            font-size: 1.1rem;
+            font-weight: 600;
+            border: none;
+            border-radius: 50px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .btn-yes {
+            background: linear-gradient(135deg, var(--amethyst) 0%, var(--rose) 100%);
+            color: white;
+            box-shadow: 0 4px 15px rgba(155, 89, 182, 0.4);
+        }
+
+        .btn-yes:hover {
+            transform: scale(1.1);
+            box-shadow: 0 6px 25px rgba(155, 89, 182, 0.5);
+        }
+
+        .btn-no {
+            background: #f0f0f0;
+            color: #999;
+            font-size: 0.9rem;
+        }
+
+        .btn-no:hover {
+            transform: scale(0.9);
+            opacity: 0.7;
+        }
+
+        .btn-runaway {
+            position: absolute;
+            transition: all 0.2s ease;
+        }
+
+        /* Hearts decoration on card */
+        .hearts {
+            display: flex;
+            justify-content: center;
+            gap: 0.5rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .hearts span {
+            font-size: 1.5rem;
+            animation: pulse 1s infinite alternate;
+        }
+
+        .hearts span:nth-child(2) { animation-delay: 0.2s; }
+        .hearts span:nth-child(3) { animation-delay: 0.4s; }
+
+        @keyframes pulse {
+            from { transform: scale(1); }
+            to { transform: scale(1.2); }
+        }
+
+        /* Final page celebration */
+        .celebration {
+            font-size: 4rem;
+            margin-bottom: 1rem;
+        }
+
+        .love-message {
+            font-family: 'Caveat', cursive;
+            font-size: 2rem;
+            color: var(--amethyst);
+            margin-top: 1rem;
+            line-height: 1.5;
+        }
+
+        /* Confetti effect */
+        .confetti {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            z-index: 100;
+            display: none;
+        }
+
+        .confetti.active {
+            display: block;
+        }
+
+        .confetti-piece {
+            position: absolute;
+            width: 10px;
+            height: 20px;
+            animation: confetti-fall 3s linear forwards;
+        }
+
+        @keyframes confetti-fall {
+            0% { transform: translateY(-100px) rotate(0deg); opacity: 1; }
+            100% { transform: translateY(100vh) rotate(720deg); opacity: 0; }
+        }
+
+        /* Responsive */
+        @media (max-width: 600px) {
+            .card {
+                padding: 2rem;
+                margin: 1rem;
+            }
+
+            h1 { font-size: 2.5rem; }
+            .question { font-size: 2rem; }
+        }
+
+        /* Special button animations */
+        .wiggle {
+            animation: wiggle 0.5s ease-in-out;
+        }
+
+        @keyframes wiggle {
+            0%, 100% { transform: rotate(0deg); }
+            25% { transform: rotate(-5deg); }
+            75% { transform: rotate(5deg); }
+        }
+
+        .name {
+            color: var(--sunflower);
+            text-shadow: 1px 1px 2px rgba(0,0,0,0.1);
+        }
+
+        .amethyst-text {
+            color: var(--amethyst);
+        }
+    </style>
+</head>
+<body>
+    <!-- Floating decorations -->
+    <div class="floating-elements" id="floatingElements"></div>
+
+    <!-- Confetti container -->
+    <div class="confetti" id="confetti"></div>
+
+    <!-- Page 1: Welcome -->
+    <div class="page active" id="page1">
+        <div class="card">
+            <div class="hearts">
+                <span>💜</span>
+                <span>🌹</span>
+                <span>💜</span>
+            </div>
+            <h1>Hey <span class="name">Nastja</span>! 💜</h1>
+            <p class="subtitle">I made something special for you...</p>
+            <div class="btn-container">
+                <button class="btn btn-yes" onclick="nextPage(2)">Let me see! 🌻</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Page 2: Do you love me? -->
+    <div class="page" id="page2">
+        <div class="card">
+            <div class="hearts">
+                <span>🌹</span>
+                <span>💕</span>
+                <span>🌹</span>
+            </div>
+            <p class="question">Do you love me?</p>
+            <div class="btn-container">
+                <button class="btn btn-yes" onclick="nextPage(3)">Yes! 💜</button>
+                <button class="btn btn-yes" onclick="nextPage(3)">Of course! 🥰</button>
+                <button class="btn btn-yes" onclick="nextPage(3)">More than anything! 💕</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Page 3: Cutest boyfriend -->
+    <div class="page" id="page3">
+        <div class="card">
+            <div class="hearts">
+                <span>🌻</span>
+                <span>💜</span>
+                <span>🌻</span>
+            </div>
+            <p class="question">Who's the cutest boyfriend ever?</p>
+            <div class="btn-container" id="cuteContainer">
+                <button class="btn btn-yes" onclick="nextPage(4)">You are! 🥺</button>
+                <button class="btn btn-no" id="notYouBtn" onmouseover="runAway(this)" onclick="runAway(this)">Not you</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Page 4: Miss me? -->
+    <div class="page" id="page4">
+        <div class="card">
+            <div class="hearts">
+                <span>💜</span>
+                <span>🌹</span>
+                <span>💜</span>
+            </div>
+            <p class="question">Do you miss me when I'm not around?</p>
+            <div class="btn-container">
+                <button class="btn btn-yes" onclick="nextPage(5)">Every second! 💕</button>
+                <button class="btn btn-yes" onclick="nextPage(5)">Always thinking of you! 🥰</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Page 5: Big question -->
+    <div class="page" id="page5">
+        <div class="card">
+            <div class="hearts">
+                <span>🌹</span>
+                <span>💜</span>
+                <span>🌻</span>
+                <span>💜</span>
+                <span>🌹</span>
+            </div>
+            <p class="question">Will you be my Valentine? 💜</p>
+            <div class="btn-container" id="valentineContainer">
+                <button class="btn btn-yes" onclick="showFinal()" style="font-size: 1.3rem; padding: 1.2rem 2.5rem;">YES! 💕🌹</button>
+                <button class="btn btn-no" id="maybeBtn" onmouseover="runAwayValentine(this)" onclick="runAwayValentine(this)">Hmm maybe...</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Page 6: Final celebration -->
+    <div class="page" id="page6">
+        <div class="card" style="border-color: var(--rose);">
+            <div class="celebration">🌹💜🌻💕🌹</div>
+            <h1 style="color: var(--rose);">Yay!! 🥳</h1>
+            <p class="love-message">
+                I love you so much, <span class="name">Nastja</span>! 💜<br>
+                You make every day brighter 🌻<br>
+                Happy Valentine's Day! 🌹
+            </p>
+            <div class="celebration" style="margin-top: 1rem;">💕✨💜✨💕</div>
+        </div>
+    </div>
+
+    <script>
+        // Create floating elements
+        function createFloatingElements() {
+            const container = document.getElementById('floatingElements');
+            const elements = ['🌹', '💜', '🌻', '💕', '✨', '🌹', '💜', '🌻'];
+            
+            for (let i = 0; i < 15; i++) {
+                const el = document.createElement('div');
+                el.className = 'float';
+                el.textContent = elements[Math.floor(Math.random() * elements.length)];
+                el.style.left = Math.random() * 100 + '%';
+                el.style.animationDelay = Math.random() * 15 + 's';
+                el.style.animationDuration = (15 + Math.random() * 10) + 's';
+                container.appendChild(el);
+            }
+        }
+
+        // Navigate to next page
+        function nextPage(num) {
+            document.querySelectorAll('.page').forEach(p => p.classList.remove('active'));
+            document.getElementById('page' + num).classList.add('active');
+        }
+
+        // Run away effect for "Not you" button
+        function runAway(btn) {
+            const container = btn.parentElement.parentElement;
+            const rect = container.getBoundingClientRect();
+            
+            const maxX = rect.width - 100;
+            const maxY = rect.height - 50;
+            
+            const newX = (Math.random() - 0.5) * 200;
+            const newY = (Math.random() - 0.5) * 100;
+            
+            btn.style.position = 'relative';
+            btn.style.left = newX + 'px';
+            btn.style.top = newY + 'px';
+        }
+
+        // Run away for valentine button
+        function runAwayValentine(btn) {
+            const newX = (Math.random() - 0.5) * 250;
+            const newY = (Math.random() - 0.5) * 150;
+            
+            btn.style.position = 'relative';
+            btn.style.left = newX + 'px';
+            btn.style.top = newY + 'px';
+            btn.textContent = ['Nope!', 'Try again!', 'Can\'t click me!', 'Just say yes!', '💜'][Math.floor(Math.random() * 5)];
+        }
+
+        // Show final page with confetti
+        function showFinal() {
+            nextPage(6);
+            createConfetti();
+        }
+
+        // Create confetti effect
+        function createConfetti() {
+            const confetti = document.getElementById('confetti');
+            confetti.classList.add('active');
+            
+            const colors = ['#9b59b6', '#e84a5f', '#f4d03f', '#ffb6c1', '#d4a5e8'];
+            const emojis = ['💜', '🌹', '🌻', '💕', '✨'];
+            
+            for (let i = 0; i < 50; i++) {
+                setTimeout(() => {
+                    const piece = document.createElement('div');
+                    piece.className = 'confetti-piece';
+                    piece.style.left = Math.random() * 100 + '%';
+                    piece.style.animationDelay = Math.random() * 2 + 's';
+                    
+                    if (Math.random() > 0.5) {
+                        piece.style.backgroundColor = colors[Math.floor(Math.random() * colors.length)];
+                        piece.style.borderRadius = '50%';
+                    } else {
+                        piece.textContent = emojis[Math.floor(Math.random() * emojis.length)];
+                        piece.style.fontSize = '1.5rem';
+                    }
+                    
+                    confetti.appendChild(piece);
+                    
+                    setTimeout(() => piece.remove(), 3000);
+                }, i * 50);
+            }
+        }
+
+        // Initialize
+        createFloatingElements();
+    </script>
+</body>
+</html>
