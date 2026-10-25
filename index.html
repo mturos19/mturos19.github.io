@@ -385,7 +385,7 @@
         <p class="label">Research</p>
         <h2 id="research-title">An agent that allocates a portfolio with the downside in mind.</h2>
         <p class="section__sub">I built a custom Gymnasium market environment and trained a Proximal Policy Optimisation agent to set portfolio weights across stocks, ETFs, commodities, REITs and crypto. It's rewarded for return, penalised for tail risk and charged for every trade, then backtested with monthly rebalancing over 2010 to 2023.</p>
-        <p class="section__sub">It finished at 10.6× its starting value against the S&amp;P 500's 3.2×, with lower volatility and lower CVaR than the benchmark.</p>
+        <p class="section__sub">It finished at 11.7× its starting value against the S&amp;P 500's 4.2×, with lower volatility and lower CVaR than the benchmark.</p>
         <ul class="facts">
           <li><b>15 assets</b><span>in six groups: US tech, SPY and QQQ, gold, oil and silver, three REIT funds, and Bitcoin, Ether and Litecoin.</span></li>
           <li><b>365 × 125</b><span>is what the agent sees each step: a year of five FRED macro series plus eight technical indicators per asset.</span></li>
@@ -399,31 +399,46 @@
           <a class="btn btn--quiet" href="https://github.com/mturos19/assetalloc" target="_blank" rel="noopener">GitHub <svg viewBox="0 0 16 16" aria-hidden="true"><path d="M6 3h7v7M13 3 4 12"/></svg></a>
         </div>
       </header>
-      <figure class="bars" id="bars">
-        <figcaption>
-          <span class="label">Cumulative return, 2010–2023 backtest</span>
-          <span class="bars__note">Growth of 1 unit invested at the start</span>
-        </figcaption>
-        <div class="bars__plot">
-          <div class="bars__grid" aria-hidden="true"><i style="--x:0"></i><i style="--x:3"></i><i style="--x:6"></i><i style="--x:9"></i><i style="--x:12"></i></div>
-          <div class="bar bar--hero bar--inside" style="--v:10.6" tabindex="0" data-tip="PPO agent: 1 became 10.6 · lower volatility and CVaR than the S&amp;P 500">
-            <span class="bar__name">PPO agent</span>
-            <span class="bar__track"><span class="bar__fill"></span><span class="bar__val">10.6×</span></span>
+      <div class="research__aside">
+        <figure class="bars" id="bars">
+          <figcaption>
+            <span class="label">Cumulative return, 2010–2023 backtest</span>
+            <span class="bars__note">Growth of 1 unit invested at the start</span>
+          </figcaption>
+          <div class="bars__plot">
+            <div class="bars__grid" aria-hidden="true"><i style="--x:0"></i><i style="--x:3"></i><i style="--x:6"></i><i style="--x:9"></i><i style="--x:12"></i></div>
+            <div class="bar bar--hero bar--inside" style="--v:11.7" tabindex="0" data-tip="PPO agent: 1 became 11.7 · lower volatility and CVaR than the S&amp;P 500">
+              <span class="bar__name">PPO agent</span>
+              <span class="bar__track"><span class="bar__fill"></span><span class="bar__val">11.7×</span></span>
+            </div>
+            <div class="bar" style="--v:4.2" tabindex="0" data-tip="S&amp;P 500 benchmark: 1 became 4.2 over the same period">
+              <span class="bar__name">S&amp;P 500</span>
+              <span class="bar__track"><span class="bar__fill"></span><span class="bar__val">4.2×</span></span>
+            </div>
+            <div class="bars__axis" aria-hidden="true"><span style="--x:0">0×</span><span style="--x:3">3×</span><span style="--x:6">6×</span><span style="--x:9">9×</span><span style="--x:12">12×</span></div>
+            <div class="bars__tip" id="bars-tip" role="status" hidden></div>
           </div>
-          <div class="bar" style="--v:3.2" tabindex="0" data-tip="S&amp;P 500 benchmark: 1 became 3.2 over the same period">
-            <span class="bar__name">S&amp;P 500</span>
-            <span class="bar__track"><span class="bar__fill"></span><span class="bar__val">3.2×</span></span>
+          <table class="sr-only">
+            <caption>Cumulative return over the 2010–2023 backtest</caption>
+            <tr><th scope="col">Strategy</th><th scope="col">Multiple</th></tr>
+            <tr><td>PPO agent</td><td>11.7×</td></tr>
+            <tr><td>S&amp;P 500</td><td>4.2×</td></tr>
+          </table>
+        </figure>
+        <div class="browser browser--chart" data-gallery>
+          <button class="browser__viewport" type="button" aria-label="Enlarge backtest chart" style="--ratio:1.82">
+            <img class="browser__shot is-active" src="assets/img/research/performance_comparison.webp" width="1016" height="560" loading="lazy" decoding="async" alt="Line chart of normalised portfolio value against the S&amp;P 500, 2010 to 2024">
+            <img class="browser__shot" src="assets/img/research/drawdown.webp" width="1027" height="560" loading="lazy" decoding="async" alt="Line chart of the portfolio's drawdown from its running peak, 2010 to 2024">
+            <img class="browser__shot" src="assets/img/research/asset_allocation.webp" width="638" height="480" loading="lazy" decoding="async" alt="Stacked area chart of portfolio weight by asset class over time">
+          </button>
+          <div class="browser__tabs" role="tablist" aria-label="Backtest charts" style="--count:3">
+            <button class="browser__tab" type="button" role="tab" aria-selected="true" data-caption="The gap opens from 2015 and keeps widening; the agent stays ahead of the index through 2020 and 2022.">Equity curve</button>
+            <button class="browser__tab" type="button" role="tab" aria-selected="false" tabindex="-1" data-caption="Distance below the previous peak. The worst stretch was about 27% through 2017; the March 2020 crash cost it under 20%.">Drawdown</button>
+            <button class="browser__tab" type="button" role="tab" aria-selected="false" tabindex="-1" data-caption="Weights by asset class at each monthly rebalance. The agent rotates between tech, crypto, real estate and commodities rather than holding one mix.">Allocation</button>
           </div>
-          <div class="bars__axis" aria-hidden="true"><span style="--x:0">0×</span><span style="--x:3">3×</span><span style="--x:6">6×</span><span style="--x:9">9×</span><span style="--x:12">12×</span></div>
-          <div class="bars__tip" id="bars-tip" role="status" hidden></div>
+          <p class="browser__caption">The gap opens from 2015 and keeps widening; the agent stays ahead of the index through 2020 and 2022.</p>
         </div>
-        <table class="sr-only">
-          <caption>Cumulative return over the 2010–2023 backtest</caption>
-          <tr><th scope="col">Strategy</th><th scope="col">Multiple</th></tr>
-          <tr><td>PPO agent</td><td>10.6×</td></tr>
-          <tr><td>S&amp;P 500</td><td>3.2×</td></tr>
-        </table>
-      </figure>
+      </div>
     </div>
   </section>
 

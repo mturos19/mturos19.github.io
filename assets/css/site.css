@@ -421,6 +421,17 @@ a.browser__url:hover { border-color: var(--line-strong); color: var(--fg-2); }
   position: absolute; z-index: 2; max-width: 260px; padding: 8px 11px; font-size: .8125rem; line-height: 1.4; color: var(--bg);
   background: var(--fg); border-radius: 8px; pointer-events: none; box-shadow: var(--shadow); transform: translate(-50%, calc(-100% - 10px));
 }
+.research__aside { display: grid; gap: 16px; min-width: 0; }
+/* backtest charts: matplotlib renders on white, so dark mode inverts them onto a near-panel plate */
+.browser--chart { box-shadow: none; }
+.browser--chart .browser__viewport { background: #141414; }
+.browser--chart .browser__shot { filter: invert(.92) hue-rotate(180deg); }
+@media (prefers-color-scheme: light) {
+  :root:not([data-theme="dark"]) .browser--chart .browser__viewport { background: #fff; }
+  :root:not([data-theme="dark"]) .browser--chart .browser__shot { filter: none; }
+}
+:root[data-theme="light"] .browser--chart .browser__viewport { background: #fff; }
+:root[data-theme="light"] .browser--chart .browser__shot { filter: none; }
 @media (max-width: 960px) { .research { grid-template-columns: minmax(0, 1fr); } }
 @media (max-width: 420px) { .bars__plot { --name: 5rem; } }
 
