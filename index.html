@@ -1,0 +1,529 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Mark Turos</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<meta name="description" content="Mark Turos is a software engineer who ships complete products: PalBoard, Somni and more. Marketplace integrations at Pertemba.">
+<meta name="theme-color" content="#0B0D12">
+<link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Mark Turos">
+<meta property="og:description" content="Software engineer. PalBoard, Somni and one more on the way.">
+<meta property="og:image" content="https://mturos19.github.io/assets/og.png">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wdth,wght@12..96,75..100,200..800&family=Instrument+Sans:ital,wdth,wght@0,75..100,400..700;1,75..100,400..700&family=Martian+Mono:wdth,wght@75..112.5,100..800&display=swap">
+<link rel="stylesheet" href="assets/css/site.css">
+<script>try{var t=localStorage.getItem('theme');if(t==='light'||t==='dark')document.documentElement.dataset.theme=t}catch(e){}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"Person","name":"Mark Turos","jobTitle":"Software Engineer","address":{"@type":"PostalAddress","addressLocality":"Rugby","addressCountry":"GB"},"alumniOf":[{"@type":"CollegeOrUniversity","name":"Coventry University"},{"@type":"CollegeOrUniversity","name":"University of Leicester"}],"knowsLanguage":["en","ro"],"sameAs":["https://www.linkedin.com/in/markturos","https://github.com/mturos19"]}</script>
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+
+<header class="nav">
+  <div class="nav__inner wrap">
+    <a class="brand" href="#top" aria-label="Mark Turos, back to top">
+      <span class="brand__mark" aria-hidden="true">mt<i>_</i></span>
+      <span class="brand__name">Mark Turos</span>
+    </a>
+    <nav class="nav__links" aria-label="Sections">
+      <a href="#work">Work</a>
+      <a href="#source">Source</a>
+      <a href="#experience">Experience</a>
+      <a href="#research">Research</a>
+      <a href="#stack">Stack</a>
+    </nav>
+    <div class="nav__tools">
+      <button class="cmdk" type="button" data-open-palette aria-label="Open command menu">
+        <svg viewBox="0 0 16 16" aria-hidden="true"><circle cx="7" cy="7" r="4.5"/><path d="m10.5 10.5 3 3"/></svg>
+        <span class="cmdk__text">Jump to…</span>
+        <kbd data-mod>Ctrl</kbd><kbd>K</kbd>
+      </button>
+      <button class="icon-btn" type="button" data-theme-toggle aria-label="Switch theme">
+        <svg class="i-sun" viewBox="0 0 16 16" aria-hidden="true"><circle cx="8" cy="8" r="3"/><path d="M8 1v1.5M8 13.5V15M1 8h1.5M13.5 8H15M3 3l1 1M12 12l1 1M3 13l1-1M12 4l1-1"/></svg>
+        <svg class="i-moon" viewBox="0 0 16 16" aria-hidden="true"><path d="M13.5 9.5A5.5 5.5 0 0 1 6.5 2.5a5.5 5.5 0 1 0 7 7Z"/></svg>
+      </button>
+    </div>
+  </div>
+</header>
+
+<div class="page">
+<div class="backdrop" aria-hidden="true"></div>
+<main id="main">
+
+  <section class="hero wrap" id="top">
+    <div class="hero__copy">
+      <p class="eyebrow">
+        <span class="live"><i></i>Software engineer</span>
+        <span>Rugby, UK</span>
+      </p>
+      <h1 class="display">Hi, I'm Mark.<br>I write software, some of it ships.<span class="caret" aria-hidden="true"></span></h1>
+      <p class="lede">I'm a software engineer with a background in computer science and data science. My day job is in e-commerce integrations, working with APIs, data pipelines and automation. In my spare time I design, build and ship my own products, from the first idea through to launch.</p>
+      <div class="hero__cta">
+        <a class="btn btn--primary" href="#work">See the work</a>
+        <button class="btn" type="button" data-open-explorer="PalBoard">Browse the source</button>
+        <span class="hint">or press <kbd data-mod>Ctrl</kbd><kbd>K</kbd> to jump anywhere</span>
+      </div>
+    </div>
+
+    <figure class="hexview" id="hexview">
+      <div class="hexview__bar">
+        <span class="dots" aria-hidden="true"><i></i><i></i><i></i></span>
+        <span class="hexview__title">xxd mark.json</span>
+        <span class="hexview__meta" id="hex-size">UTF-8</span>
+      </div>
+      <div class="hexview__hex" id="hex" aria-hidden="true"></div>
+      <pre class="hexview__json" id="hex-json" aria-label="Decoded: name Mark Turos, builds software, based in Rugby UK, ships PalBoard, Somni and one more">{
+  "name": "Mark Turos",
+  "builds": "software",
+  "based": "Rugby, UK",
+  "ships": ["PalBoard", "Somni", "???"]
+}</pre>
+      <figcaption class="hexview__status">
+        <span id="hex-decoded">decoded</span>
+        <span id="hex-cursor">hover any byte</span>
+      </figcaption>
+    </figure>
+  </section>
+
+  <section class="metrics wrap" aria-labelledby="metrics-label">
+    <p class="label" id="metrics-label">Currently · Pertemba</p>
+    <dl>
+      <div><dt>a year flows through the marketplace ecosystem I integrate</dt><dd>£36M</dd></div>
+      <div><dt>SKUs kept in sync across channels</dt><dd>2M+</dd></div>
+      <div><dt>marketplace channels connected</dt><dd>160+</dd></div>
+      <div><dt>weekly revenue from integrations I've shipped</dt><dd>£40K+</dd></div>
+    </dl>
+  </section>
+
+  <section class="section wrap" id="work" aria-labelledby="work-title">
+    <header class="section__head">
+      <p class="label">Work <span class="label__aside">02 shipped · 01 incoming</span></p>
+      <h2 id="work-title">Products I designed, built and shipped myself.</h2>
+    </header>
+
+    <article class="project" id="palboard" data-accent="pal" data-repo="PalBoard" data-live="https://palboard.app" data-title="PalBoard" data-uses="TypeScript,React,Vite,Tailwind CSS,WebAssembly,Web Workers,IndexedDB,Electron,Vitest,Playwright,Cloudflare Pages,Git">
+      <div class="project__head">
+        <span class="project__idx">01</span>
+        <h3 class="project__name">PalBoard</h3>
+        <span class="status status--live"><i></i>Live</span>
+        <p class="project__tag">A Palworld save dashboard that runs entirely in your browser.</p>
+      </div>
+      <div class="project__body">
+        <div class="browser" data-gallery>
+          <div class="browser__chrome">
+            <span class="dots" aria-hidden="true"><i></i><i></i><i></i></span>
+            <a class="browser__url" href="https://palboard.app" target="_blank" rel="noopener">
+              <svg viewBox="0 0 16 16" aria-hidden="true"><rect x="3.5" y="7" width="9" height="6.5" rx="1.5"/><path d="M5.5 7V5a2.5 2.5 0 0 1 5 0v2"/></svg>
+              <span><b>palboard.app</b><span class="browser__path">/#/</span></span>
+            </a>
+            <a class="browser__open" href="https://palboard.app" target="_blank" rel="noopener" aria-label="Open palboard.app in a new tab">
+              <svg viewBox="0 0 16 16" aria-hidden="true"><path d="M6 3h7v7M13 3 4 12"/></svg>
+            </a>
+          </div>
+          <button class="browser__viewport" type="button" aria-label="Enlarge PalBoard screenshot" style="--ratio:1.537">
+            <span class="browser__backdrop" aria-hidden="true"></span>
+            <img class="browser__shot is-active" src="assets/img/palboard/main_screen.webp" data-thumb="assets/img/palboard/main_screen-thumb.webp" width="1434" height="933" decoding="async" alt="PalBoard dashboard with a resource strip, alerts, players and base cards">
+            <img class="browser__shot" src="assets/img/palboard/pal_screen.webp" data-thumb="assets/img/palboard/pal_screen-thumb.webp" width="1432" height="931" loading="lazy" decoding="async" alt="Virtualized table of 1,008 pals with filters and IVs">
+            <img class="browser__shot" src="assets/img/palboard/pal_screen_2.webp" data-thumb="assets/img/palboard/pal_screen_2-thumb.webp" width="1432" height="933" loading="lazy" decoding="async" alt="Pal detail drawer with condition, IV bars and skills">
+            <img class="browser__shot" src="assets/img/palboard/bases_screen.webp" data-thumb="assets/img/palboard/bases_screen-thumb.webp" width="1436" height="939" loading="lazy" decoding="async" alt="Bases view with workers, structures and influence radius">
+            <img class="browser__shot" src="assets/img/palboard/inventory_screen.webp" data-thumb="assets/img/palboard/inventory_screen-thumb.webp" width="1439" height="933" loading="lazy" decoding="async" alt="Inventory aggregated across owned chests and pouches">
+            <img class="browser__shot" src="assets/img/palboard/statistics_screen.webp" data-thumb="assets/img/palboard/statistics_screen-thumb.webp" width="1435" height="935" loading="lazy" decoding="async" alt="Statistics: level distribution, elements, top species and IV quality">
+          </button>
+          <div class="browser__tabs" role="tablist" aria-label="PalBoard screens" style="--count:6">
+            <button class="browser__tab" type="button" role="tab" aria-selected="true" data-path="/#/" data-caption="The whole world on one screen. The status bar reports the parse itself: codec, ratio, timing and warnings.">Dashboard</button>
+            <button class="browser__tab" type="button" role="tab" aria-selected="false" tabindex="-1" data-path="/#/pals" data-caption="1,008 pals in a virtualized table with full-text search, quick filters and CSV export.">Pals</button>
+            <button class="browser__tab" type="button" role="tab" aria-selected="false" tabindex="-1" data-path="/#/pals" data-caption="Live condition, IV bars, condense rank, skills and exactly where the pal lives.">Pal detail</button>
+            <button class="browser__tab" type="button" role="tab" aria-selected="false" tabindex="-1" data-path="/#/bases" data-caption="Each camp with its workers, structures, real influence radius and who needs attention.">Bases</button>
+            <button class="browser__tab" type="button" role="tab" aria-selected="false" tabindex="-1" data-path="/#/inventory" data-caption="Only the storage you own: base chests and player pouches, resolved structurally.">Inventory</button>
+            <button class="browser__tab" type="button" role="tab" aria-selected="false" tabindex="-1" data-path="/#/statistics" data-caption="Level distribution, element mix, top species and IV quality, plus history PalBoard records itself.">Statistics</button>
+          </div>
+          <p class="browser__caption">The whole world on one screen. The status bar reports the parse itself: codec, ratio, timing and warnings.</p>
+        </div>
+
+        <div class="project__info">
+          <p class="project__desc">Drop your save folder on the page and PalBoard decodes a 32&nbsp;MB proprietary binary format the game never documented. No upload, no account, no install, and no write path anywhere near your world.</p>
+          <ul class="facts">
+            <li><b>~0.5 s</b><span>to open a 32&nbsp;MB Unreal Engine save, Oodle-compressed, through a WebAssembly decoder running in a Web Worker.</span></li>
+            <li><b>0 bytes</b><span>uploaded. The page's Content-Security-Policy lists no remote origin, so an accidental upload would fail before leaving the browser.</span></li>
+            <li><b>6.7M <i>→</i> 1.7M</b><span>gold. Summing every container on the island overcounts; resolving which chests stand in your bases gives the real figure.</span></li>
+            <li><b>135 tests</b><span>across parser, compression, inventory and watcher, plus a browser driver that fails on any overflow at phone width.</span></li>
+          </ul>
+          <ul class="chips" aria-label="Built with">
+            <li>React 19</li><li>TypeScript</li><li>Vite 7</li><li>Tailwind v4</li><li>WebAssembly</li><li>Web Workers</li><li>IndexedDB</li><li>File System Access</li><li>Electron</li><li>Vitest</li>
+          </ul>
+          <div class="project__actions">
+            <a class="btn btn--primary" href="https://palboard.app" target="_blank" rel="noopener">Open palboard.app <svg viewBox="0 0 16 16" aria-hidden="true"><path d="M6 3h7v7M13 3 4 12"/></svg></a>
+            <button class="btn" type="button" data-open-explorer="PalBoard">Browse source</button>
+            <a class="btn btn--quiet" href="https://github.com/mturos19/PalBoard" target="_blank" rel="noopener">GitHub <svg viewBox="0 0 16 16" aria-hidden="true"><path d="M6 3h7v7M13 3 4 12"/></svg></a>
+          </div>
+          <p class="project__gh" data-gh-line="PalBoard"></p>
+        </div>
+      </div>
+    </article>
+
+    <article class="project" id="somni" data-accent="somni" data-repo="Somni" data-live="https://somni.app" data-title="Somni" data-uses="TypeScript,React,Next.js,Tailwind CSS,Claude API,ElevenLabs,Zod,Web Audio,IndexedDB,Vercel,Git">
+      <div class="project__head">
+        <span class="project__idx">02</span>
+        <h3 class="project__name">Somni</h3>
+        <span class="status"><i></i>Pre-launch</span>
+        <p class="project__tag">A new bedtime story every night, read aloud in your own voice.</p>
+      </div>
+      <div class="project__body">
+        <div class="browser" data-gallery>
+          <div class="browser__chrome">
+            <span class="dots" aria-hidden="true"><i></i><i></i><i></i></span>
+            <a class="browser__url" href="https://somni.app" target="_blank" rel="noopener">
+              <svg viewBox="0 0 16 16" aria-hidden="true"><rect x="3.5" y="7" width="9" height="6.5" rx="1.5"/><path d="M5.5 7V5a2.5 2.5 0 0 1 5 0v2"/></svg>
+              <span><b>somni.app</b><span class="browser__path">/</span></span>
+            </a>
+            <a class="browser__open" href="https://somni.app" target="_blank" rel="noopener" aria-label="Open somni.app in a new tab">
+              <svg viewBox="0 0 16 16" aria-hidden="true"><path d="M6 3h7v7M13 3 4 12"/></svg>
+            </a>
+          </div>
+          <button class="browser__viewport" type="button" aria-label="Enlarge Somni screenshot" style="--ratio:1.5">
+            <span class="browser__backdrop" aria-hidden="true"></span>
+            <img class="browser__shot is-active" src="assets/img/somni/main_screen.webp" data-thumb="assets/img/somni/main_screen-thumb.webp" width="1543" height="902" decoding="async" alt="Somni story builder with name, age dial, theme picker and story elements">
+            <img class="browser__shot" src="assets/img/somni/writing_screen.webp" data-thumb="assets/img/somni/writing_screen-thumb.webp" width="1289" height="911" loading="lazy" decoding="async" alt="Writing overlay with a streamed progress bar">
+            <img class="browser__shot" src="assets/img/somni/reader_cover.webp" data-thumb="assets/img/somni/reader_cover-thumb.webp" width="1396" height="863" loading="lazy" decoding="async" alt="Story cover: Mark and the Case of the Missing Crown">
+            <img class="browser__shot" src="assets/img/somni/reader_screen.webp" data-thumb="assets/img/somni/reader_screen-thumb.webp" width="1270" height="895" loading="lazy" decoding="async" alt="Reader page mid-narration with the spoken word lit up">
+            <img class="browser__shot" src="assets/img/somni/voice_screen.webp" data-thumb="assets/img/somni/voice_screen-thumb.webp" width="1210" height="886" loading="lazy" decoding="async" alt="Voice studio with three passages to record">
+          </button>
+          <div class="browser__tabs" role="tablist" aria-label="Somni screens" style="--count:5">
+            <button class="browser__tab" type="button" role="tab" aria-selected="true" data-path="/" data-caption="Forty story elements in four groups, hard caps to keep it focused, and an age dial that retunes everything.">Builder</button>
+            <button class="browser__tab" type="button" role="tab" aria-selected="false" tabindex="-1" data-path="/" data-caption="Progress streams over server-sent events, so a minute of writing never looks frozen.">Writing</button>
+            <button class="browser__tab" type="button" role="tab" aria-selected="false" tabindex="-1" data-path="/" data-caption="Every story opens on a cover with a dedication written for the child.">Cover</button>
+            <button class="browser__tab" type="button" role="tab" aria-selected="false" tabindex="-1" data-path="/" data-caption="Each word lifts and warms as the voice reaches it, and the page turns itself.">Reader</button>
+            <button class="browser__tab" type="button" role="tab" aria-selected="false" tabindex="-1" data-path="/" data-caption="Three short passages, about ninety seconds in all, and every story can be read in your voice.">Voice</button>
+          </div>
+          <p class="browser__caption">Forty story elements in four groups, hard caps to keep it focused, and an age dial that retunes everything.</p>
+        </div>
+
+        <div class="project__info">
+          <p class="project__desc">Pick who is in the story and where it happens, set your child's age, and Claude writes an original story tuned to that age. It comes back narrated by a clone of your voice, lighting up each word as it is spoken. Stories and audio never leave the browser.</p>
+          <ul class="facts">
+            <li><b>Age 2–7</b><span>The dial retunes the whole spec: page count, words per page, longest sentence, plot shape and how much tension is allowed.</span></li>
+            <li><b>90 s</b><span>of audio makes the clone. Echo cancellation, noise suppression and auto-gain are off, because they flattened the delivery the clone learns from.</span></li>
+            <li><b>80 ms</b><span>The reader runs ahead of the audio clock, since currentTime is the decode position, not the moment sound leaves the speaker.</span></li>
+            <li><b>&gt;1.5 s</b><span>of audio past the last aligned character means invented words, so that segment regenerates before the child ever hears it.</span></li>
+          </ul>
+          <ul class="chips" aria-label="Built with">
+            <li>Next.js 16</li><li>React 19</li><li>TypeScript</li><li>Claude API</li><li>ElevenLabs</li><li>Zod 4</li><li>Web Audio</li><li>IndexedDB</li><li>Tailwind v4</li><li>Vercel</li>
+          </ul>
+          <div class="project__actions">
+            <a class="btn btn--primary" href="https://somni.app" target="_blank" rel="noopener">Open somni.app <svg viewBox="0 0 16 16" aria-hidden="true"><path d="M6 3h7v7M13 3 4 12"/></svg></a>
+            <button class="btn" type="button" data-open-explorer="Somni">Browse source</button>
+            <a class="btn btn--quiet" href="https://github.com/mturos19/Somni" target="_blank" rel="noopener">GitHub <svg viewBox="0 0 16 16" aria-hidden="true"><path d="M6 3h7v7M13 3 4 12"/></svg></a>
+          </div>
+          <p class="project__gh" data-gh-line="Somni"></p>
+        </div>
+      </div>
+    </article>
+
+    <article class="project project--incoming" id="incoming" data-accent="signal" data-title="Project 03">
+      <div class="project__head">
+        <span class="project__idx">03</span>
+        <h3 class="project__name" aria-label="Incoming"><span class="scramble" data-scramble="Incoming…">Incoming…</span></h3>
+        <span class="status"><i></i>In stealth</span>
+        <p class="project__tag">Something new is on the bench.</p>
+      </div>
+      <div class="project__body">
+        <div class="browser">
+          <div class="browser__chrome">
+            <span class="dots" aria-hidden="true"><i></i><i></i><i></i></span>
+            <span class="browser__url browser__url--static">
+              <svg viewBox="0 0 16 16" aria-hidden="true"><rect x="3.5" y="7" width="9" height="6.5" rx="1.5"/><path d="M5.5 7V5a2.5 2.5 0 0 1 5 0v2"/></svg>
+              <span><b><span class="redact">xxxxxxx</span>.app</b></span>
+            </span>
+          </div>
+          <div class="browser__viewport browser__viewport--static">
+            <canvas class="static" id="static" aria-hidden="true"></canvas>
+            <pre class="term" aria-label="Terminal: the project has not shipped yet"><span class="term__p">$</span> git log --oneline | wc -l
+  <span class="redact">00</span>
+<span class="term__p">$</span> ship --prod
+  not yet. soon.<span class="caret caret--sm"></span></pre>
+          </div>
+        </div>
+        <div class="project__info">
+          <p class="project__desc">It's early and I'm not ready to show it. It follows the same pattern as the first two: a real problem, a small sharp product, and an engineering write-up of everything that turned out to be harder than it looked.</p>
+        </div>
+      </div>
+    </article>
+  </section>
+
+  <section class="section wrap" id="source" aria-labelledby="source-title">
+    <header class="section__head">
+      <p class="label">Source</p>
+      <h2 id="source-title">Read the code without leaving the page.</h2>
+      <p class="section__sub">Both repositories are public. Open one to browse the file tree, read any file with syntax highlighting, and see recent commits, pulled live from GitHub.</p>
+    </header>
+    <div class="repos">
+      <button class="repo" type="button" data-open-explorer="PalBoard" data-accent="pal">
+        <span class="repo__name">mturos19/<b>PalBoard</b></span>
+        <span class="repo__desc">A Palworld save dashboard that runs entirely in your browser.</span>
+        <span class="langbar" data-langbar="PalBoard"></span>
+        <span class="repo__stats" data-repo-stats="PalBoard"></span>
+        <span class="repo__last" data-repo-last="PalBoard"></span>
+        <span class="repo__cta">Open in explorer <svg viewBox="0 0 16 16" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4"/></svg></span>
+      </button>
+      <button class="repo" type="button" data-open-explorer="Somni" data-accent="somni">
+        <span class="repo__name">mturos19/<b>Somni</b></span>
+        <span class="repo__desc">AI bedtime stories, narrated in your own cloned voice.</span>
+        <span class="langbar" data-langbar="Somni"></span>
+        <span class="repo__stats" data-repo-stats="Somni"></span>
+        <span class="repo__last" data-repo-last="Somni"></span>
+        <span class="repo__cta">Open in explorer <svg viewBox="0 0 16 16" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4"/></svg></span>
+      </button>
+      <a class="repo repo--out" href="https://github.com/mturos19" target="_blank" rel="noopener">
+        <span class="repo__name">github.com/<b>mturos19</b></span>
+        <span class="repo__desc">Everything else I've made public.</span>
+        <svg class="repo__mark" viewBox="0 0 16 16" aria-hidden="true"><path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0 0 16 8c0-4.42-3.58-8-8-8Z"/></svg>
+        <span class="repo__cta">Open GitHub <svg viewBox="0 0 16 16" aria-hidden="true"><path d="M6 3h7v7M13 3 4 12"/></svg></span>
+      </a>
+    </div>
+  </section>
+
+  <section class="section wrap" id="experience" aria-labelledby="xp-title">
+    <header class="section__head">
+      <p class="label">Experience <span class="label__aside">git log --career</span></p>
+      <h2 id="xp-title">Where I've worked so far.</h2>
+    </header>
+    <div class="xp">
+      <ol class="log">
+        <li class="log__item is-head" id="role-pertemba-tech" data-title="Pertemba · Technical Marketplace Integrations Specialist" data-uses="Python,pandas,REST APIs,Marketplace feeds,ETL / ELT,Channable,Mirakl,Rithum,Workflow automation">
+          <span class="log__dot" aria-hidden="true"></span>
+          <div class="log__body">
+            <p class="log__meta"><span class="ref">HEAD</span><span class="ref ref--muted">promoted</span><time>Sep 2026 – now</time></p>
+            <h3 class="log__role">Technical Marketplace Integrations Specialist <span class="log__org">Pertemba</span></h3>
+            <ul>
+              <li>Drive end-to-end implementation of marketplace integrations generating £40K+ in weekly revenue, connecting platforms, channels and brand partners.</li>
+              <li>Write Python and pandas automation to transform, validate and analyse large product datasets, replacing manual processing.</li>
+              <li>Engineer product data pipelines and marketplace feeds, fixing the mapping and transformation issues that hurt listing quality.</li>
+              <li>Trace cross-platform failures through APIs, data flows and feed logic, and ship fixes with internal teams and external vendors.</li>
+            </ul>
+          </div>
+        </li>
+        <li class="log__item" id="role-pertemba" data-title="Pertemba · Marketplace Integration Specialist" data-uses="REST APIs,Marketplace feeds,Channable,Mirakl,Rithum">
+          <span class="log__dot" aria-hidden="true"></span>
+          <div class="log__body">
+            <p class="log__meta"><time>Feb 2026 – Sep 2026</time></p>
+            <h3 class="log__role">Marketplace Integration Specialist <span class="log__org">Pertemba</span></h3>
+            <ul>
+              <li>Onboarded and integrated brand partners across an eCommerce ecosystem processing £36M a year, 2M+ SKUs and 160+ marketplace channels.</li>
+              <li>Kept product data, pricing and inventory in sync across every external sales channel.</li>
+              <li>Acted as technical liaison between operations, commercial teams and marketplace partners on high-volume product flows.</li>
+            </ul>
+          </div>
+        </li>
+        <li class="log__item" id="role-techdrivers" data-title="Techdrivers · IT Engineer">
+          <span class="log__dot" aria-hidden="true"></span>
+          <div class="log__body">
+            <p class="log__meta"><time>Aug 2021 – Dec 2023</time><span>Rugby</span></p>
+            <h3 class="log__role">IT Engineer <span class="log__org">Techdrivers Ltd</span></h3>
+            <ul>
+              <li>Helped design and maintain the company's proprietary computer systems.</li>
+              <li>Volunteered for on-call emergency software fixes, tracking down, isolating and resolving issues and lifting productivity by over 15%.</li>
+              <li>Wrote IT reports for senior management.</li>
+            </ul>
+          </div>
+        </li>
+        <li class="log__item" id="role-leicester" data-title="University of Leicester · Data Analyst" data-uses="Python,SciPy,scikit-learn,Quarto">
+          <span class="log__dot" aria-hidden="true"></span>
+          <div class="log__body">
+            <p class="log__meta"><time>Jun 2023 – Jul 2023</time><span>Micro-internship</span></p>
+            <h3 class="log__role">Data Analyst <span class="log__org">University of Leicester</span></h3>
+            <ul>
+              <li>Streamlined extraction, cleaning and processing with SciPy and scikit-learn, cutting data-prep time by 30%.</li>
+              <li>Used Quarto to live-render models and graphs that the university now uses in teaching.</li>
+            </ul>
+          </div>
+        </li>
+        <li class="log__item" id="role-renegate" data-title="Renegate · IT Support Technician" data-uses="SQL">
+          <span class="log__dot" aria-hidden="true"></span>
+          <div class="log__body">
+            <p class="log__meta"><time>Feb 2018 – May 2018</time><span>Rugby</span></p>
+            <h3 class="log__role">IT Support Technician <span class="log__org">Renegate Ltd</span></h3>
+            <ul>
+              <li>Installed and configured systems, raising measured productivity by 45%.</li>
+              <li>Diagnosed hardware and software faults, saving £1K–£5K per fix.</li>
+              <li>Led a log-analysis initiative with MySQL and Excel VBA to understand customer behaviour.</li>
+            </ul>
+          </div>
+        </li>
+      </ol>
+
+      <aside class="xp__aside" aria-label="Education and more">
+        <div class="panel">
+          <p class="label">Education</p>
+          <div class="edu">
+            <div>
+              <p class="edu__deg">MSc Data Science &amp; Computational Intelligence</p>
+              <p class="edu__school">Coventry University <span class="badge">Distinction</span></p>
+              <p class="edu__when">Jan 2024 – Mar 2025</p>
+            </div>
+            <div>
+              <p class="edu__deg">BSc Computer Science</p>
+              <p class="edu__school">University of Leicester, including a year of mathematics</p>
+              <p class="edu__when">Sep 2019 – Jul 2023</p>
+            </div>
+          </div>
+        </div>
+        <div class="panel panel--split">
+          <div><p class="label">Honours</p><p>The Leicester Award</p></div>
+          <div><p class="label">Languages</p><p>English, Romanian <span class="muted">(both native)</span></p></div>
+        </div>
+      </aside>
+    </div>
+  </section>
+
+  <section class="section wrap" id="research" aria-labelledby="research-title" data-title="Research · PPO asset allocator" data-uses="Python,pandas,Reinforcement learning">
+    <div class="research">
+      <header class="section__head section__head--flush">
+        <p class="label">Research</p>
+        <h2 id="research-title">An agent that allocates a portfolio with the downside in mind.</h2>
+        <p class="section__sub">I built a custom Gymnasium market environment and trained a Proximal Policy Optimisation agent to set portfolio weights across stocks, ETFs, commodities, REITs and crypto. It's rewarded for return, penalised for tail risk and charged for every trade, then backtested with monthly rebalancing over 2010 to 2023.</p>
+        <p class="section__sub">It finished at 10.6× its starting value against the S&amp;P 500's 3.2×, with lower volatility and lower CVaR than the benchmark.</p>
+        <ul class="facts">
+          <li><b>15 assets</b><span>in six groups: US tech, SPY and QQQ, gold, oil and silver, three REIT funds, and Bitcoin, Ether and Litecoin.</span></li>
+          <li><b>365 × 125</b><span>is what the agent sees each step: a year of five FRED macro series plus eight technical indicators per asset.</span></li>
+          <li><b>r − ½·CVaR</b><span>The reward subtracts half the 5% Conditional Value at Risk, so a strategy that wins most months but blows up in a crash scores badly.</span></li>
+          <li><b>turnover²</b><span>Trading costs grow with the square of turnover to model market impact, which teaches the agent to rebalance gradually instead of churning.</span></li>
+        </ul>
+        <ul class="chips" aria-label="Method">
+          <li>PyTorch</li><li>Stable-Baselines3</li><li>Gymnasium</li><li>256×256 actor-critic</li><li>4 parallel envs</li><li>FRED · Yahoo · Alpha Vantage</li>
+        </ul>
+        <div class="project__actions">
+          <a class="btn btn--quiet" href="https://github.com/mturos19/assetalloc" target="_blank" rel="noopener">GitHub <svg viewBox="0 0 16 16" aria-hidden="true"><path d="M6 3h7v7M13 3 4 12"/></svg></a>
+        </div>
+      </header>
+      <figure class="bars" id="bars">
+        <figcaption>
+          <span class="label">Cumulative return, 2010–2023 backtest</span>
+          <span class="bars__note">Growth of 1 unit invested at the start</span>
+        </figcaption>
+        <div class="bars__plot">
+          <div class="bars__grid" aria-hidden="true"><i style="--x:0"></i><i style="--x:3"></i><i style="--x:6"></i><i style="--x:9"></i><i style="--x:12"></i></div>
+          <div class="bar bar--hero bar--inside" style="--v:10.6" tabindex="0" data-tip="PPO agent: 1 became 10.6 · lower volatility and CVaR than the S&amp;P 500">
+            <span class="bar__name">PPO agent</span>
+            <span class="bar__track"><span class="bar__fill"></span><span class="bar__val">10.6×</span></span>
+          </div>
+          <div class="bar" style="--v:3.2" tabindex="0" data-tip="S&amp;P 500 benchmark: 1 became 3.2 over the same period">
+            <span class="bar__name">S&amp;P 500</span>
+            <span class="bar__track"><span class="bar__fill"></span><span class="bar__val">3.2×</span></span>
+          </div>
+          <div class="bars__axis" aria-hidden="true"><span style="--x:0">0×</span><span style="--x:3">3×</span><span style="--x:6">6×</span><span style="--x:9">9×</span><span style="--x:12">12×</span></div>
+          <div class="bars__tip" id="bars-tip" role="status" hidden></div>
+        </div>
+        <table class="sr-only">
+          <caption>Cumulative return over the 2010–2023 backtest</caption>
+          <tr><th scope="col">Strategy</th><th scope="col">Multiple</th></tr>
+          <tr><td>PPO agent</td><td>10.6×</td></tr>
+          <tr><td>S&amp;P 500</td><td>3.2×</td></tr>
+        </table>
+      </figure>
+    </div>
+  </section>
+
+  <section class="section section--last wrap" id="stack" aria-labelledby="stack-title">
+    <header class="section__head">
+      <p class="label">Stack</p>
+      <h2 id="stack-title">Tools I reach for, and where I've used them.</h2>
+      <p class="section__sub">Select a tool to see the evidence.</p>
+    </header>
+    <div class="stack">
+      <div class="stack__groups">
+        <div class="stack__group"><h3 class="label">Integrations &amp; data flow</h3><div class="tools"><button type="button" class="tool">REST APIs</button><button type="button" class="tool">Marketplace feeds</button><button type="button" class="tool">Channable</button><button type="button" class="tool">Mirakl</button><button type="button" class="tool">Rithum</button><button type="button" class="tool">ETL / ELT</button><button type="button" class="tool">Workflow automation</button></div></div>
+        <div class="stack__group"><h3 class="label">Data &amp; analysis</h3><div class="tools"><button type="button" class="tool">Python</button><button type="button" class="tool">pandas</button><button type="button" class="tool">NumPy</button><button type="button" class="tool">SQL</button><button type="button" class="tool">PostgreSQL</button><button type="button" class="tool">SciPy</button><button type="button" class="tool">scikit-learn</button><button type="button" class="tool">Power BI</button><button type="button" class="tool">Tableau</button><button type="button" class="tool">Quarto</button></div></div>
+        <div class="stack__group"><h3 class="label">Product engineering</h3><div class="tools"><button type="button" class="tool">TypeScript</button><button type="button" class="tool">React</button><button type="button" class="tool">Next.js</button><button type="button" class="tool">Electron</button><button type="button" class="tool">Vite</button><button type="button" class="tool">Tailwind CSS</button><button type="button" class="tool">WebAssembly</button><button type="button" class="tool">Web Workers</button><button type="button" class="tool">Web Audio</button><button type="button" class="tool">IndexedDB</button></div></div>
+        <div class="stack__group"><h3 class="label">AI &amp; ML</h3><div class="tools"><button type="button" class="tool">Claude API</button><button type="button" class="tool">ElevenLabs</button><button type="button" class="tool">Zod</button><button type="button" class="tool">Reinforcement learning</button></div></div>
+        <div class="stack__group"><h3 class="label">Infra &amp; tooling</h3><div class="tools"><button type="button" class="tool">Git</button><button type="button" class="tool">Docker</button><button type="button" class="tool">AWS</button><button type="button" class="tool">Vercel</button><button type="button" class="tool">Cloudflare Pages</button><button type="button" class="tool">Vitest</button><button type="button" class="tool">Playwright</button></div></div>
+      </div>
+      <aside class="evidence panel" aria-live="polite">
+        <p class="label">Evidence</p>
+        <div id="evidence"><p class="evidence__empty">Pick any tool on the left. Tools with a number next to them link to a project or role where I used them.</p></div>
+      </aside>
+    </div>
+  </section>
+</main>
+
+<footer class="footer">
+  <div class="footer__inner wrap">
+    <span>© 2026 Mark Turos</span>
+    <nav class="footer__links" aria-label="Elsewhere">
+      <a href="https://github.com/mturos19" target="_blank" rel="noopener">GitHub</a>
+      <a href="https://www.linkedin.com/in/markturos" target="_blank" rel="noopener">LinkedIn</a>
+    </nav>
+    <span>Built by hand with HTML, CSS and vanilla JavaScript. No framework, no build step.</span>
+    <a href="#top">Back to top ↑</a>
+  </div>
+</footer>
+</div>
+
+<!-- Command menu -->
+<dialog class="palette" id="palette" aria-label="Command menu">
+  <div class="palette__box">
+    <div class="palette__input">
+      <svg viewBox="0 0 16 16" aria-hidden="true"><circle cx="7" cy="7" r="4.5"/><path d="m10.5 10.5 3 3"/></svg>
+      <input id="palette-input" type="text" placeholder="Jump to a section, open a site, search the source…" autocomplete="off" spellcheck="false" role="combobox" aria-expanded="true" aria-controls="palette-list" aria-autocomplete="list">
+      <kbd>Esc</kbd>
+    </div>
+    <ul class="palette__list" id="palette-list" role="listbox" aria-label="Results"></ul>
+    <div class="palette__foot"><span><kbd>↑</kbd><kbd>↓</kbd> move</span><span><kbd>↵</kbd> open</span><span>Type 2+ letters to search files in both repos</span></div>
+  </div>
+</dialog>
+
+<!-- Repo explorer -->
+<dialog class="explorer" id="explorer" aria-label="Source explorer">
+  <div class="ex" id="ex">
+    <header class="ex__head">
+      <div class="seg" role="tablist" aria-label="Repository">
+        <button type="button" role="tab" data-ex-repo="PalBoard" aria-selected="true">PalBoard</button>
+        <button type="button" role="tab" data-ex-repo="Somni" aria-selected="false">Somni</button>
+      </div>
+      <div class="ex__meta" id="ex-meta"></div>
+      <div class="ex__actions">
+        <a class="btn btn--sm" id="ex-gh" href="https://github.com/mturos19" target="_blank" rel="noopener">GitHub <svg viewBox="0 0 16 16" aria-hidden="true"><path d="M6 3h7v7M13 3 4 12"/></svg></a>
+        <button class="icon-btn" type="button" data-close aria-label="Close explorer"><svg viewBox="0 0 16 16" aria-hidden="true"><path d="m4 4 8 8M12 4l-8 8"/></svg></button>
+      </div>
+    </header>
+    <div class="ex__body">
+      <aside class="ex__side" id="ex-side">
+        <div class="ex__tabs" role="tablist" aria-label="Sidebar">
+          <button type="button" role="tab" data-side="files" aria-selected="true">Files</button>
+          <button type="button" role="tab" data-side="history" aria-selected="false">History</button>
+        </div>
+        <div class="ex__filter"><input id="ex-filter" type="search" placeholder="Filter files" autocomplete="off" spellcheck="false" aria-label="Filter files"></div>
+        <div class="ex__list" id="ex-list"></div>
+        <div class="ex__langs" id="ex-langs"></div>
+      </aside>
+      <section class="ex__main">
+        <div class="ex__crumbs">
+          <button class="btn btn--sm ex__files-btn" type="button" id="ex-files-btn" aria-controls="ex-side">Files</button>
+          <span class="ex__path" id="ex-path"></span>
+          <span class="ex__file-actions" id="ex-file-actions"></span>
+        </div>
+        <div class="ex__view" id="ex-view" tabindex="0"></div>
+      </section>
+    </div>
+  </div>
+</dialog>
+
+<!-- Screenshot viewer -->
+<dialog class="lightbox" id="lightbox" aria-label="Screenshot viewer">
+  <div class="lb">
+    <div class="lb__top"><span class="lb__count" id="lb-count"></span><button class="icon-btn" type="button" data-close aria-label="Close viewer"><svg viewBox="0 0 16 16" aria-hidden="true"><path d="m4 4 8 8M12 4l-8 8"/></svg></button></div>
+    <div class="lb__stage">
+      <button class="lb__nav lb__nav--prev icon-btn" type="button" id="lb-prev" aria-label="Previous screenshot"><svg viewBox="0 0 16 16" aria-hidden="true"><path d="M10 3 5 8l5 5"/></svg></button>
+      <img class="lb__img" id="lb-img" alt="">
+      <button class="lb__nav lb__nav--next icon-btn" type="button" id="lb-next" aria-label="Next screenshot"><svg viewBox="0 0 16 16" aria-hidden="true"><path d="m6 3 5 5-5 5"/></svg></button>
+    </div>
+    <p class="lb__caption" id="lb-caption"></p>
+  </div>
+</dialog>
+
+<script src="assets/js/site.js" defer></script>
+</body>
+</html>
